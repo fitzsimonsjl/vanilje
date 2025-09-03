@@ -1,8 +1,8 @@
 body {
-  background-color: #333;
+  background-color: #222;
   margin: auto;
-  color: #ddd;
-  font-family: Verdana, sans-serif;
+  color: #fff;
+  font-family: monospace, sans-serif; 
   padding: 20px;
   max-width: 720px;
   text-align: left;
@@ -30,17 +30,18 @@ b {
 h6.reply-via-email {
   cursor: pointer;
   font-size: 14px;
+  font-family:  monospace, sans-serif;
   text-align: center;
-  border: 3px solid #ddd;
+  border: 3px solid #fff;
   padding: 3px 3px;
   width: 130px;
   height: 25px;
-  background-color: #333;
+  background-color: #222;
   text-decoration: none;
 }
 
     a {
-      color: #8cc2dd;
+      color: orange;
     }
     
     .title {
@@ -52,6 +53,7 @@ h6.reply-via-email {
     margin-right: 10px;
     display: inline;
     list-style-type: none;
+    color:orange;
   }
 
   content {
