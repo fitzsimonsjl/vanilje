@@ -6,7 +6,17 @@
     <a href="{{ "posts" | relURL }}">Remove filter</a>
   </small>
   {{ end }}
-  <p>If you'd prefer to read these posts in a different format, you can do so via <a href="/posts/index.xml"></a>RSS</a>.</p>
+  <p>If you'd prefer to read these posts in a different format, you can do so via <a href="fitz.dk/posts/index.xml">RSS</a>. If you're only interested in certain topics, feel free to browse by the tags below:</p>
+  {{ if .Data.Singular }}
+  {{else}}
+    <small>
+      <div>
+        {{ range .Site.Taxonomies.tags }}
+        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+        {{ end }}
+      </div>
+    </small>
+    {{ end }}
   <ul class="posts">
     {{ range .Pages }}
     <li>
@@ -25,15 +35,5 @@
     </li>
     {{ end }}
   </ul>
-  {{ if .Data.Singular }}
-  {{else}}
-    <small>
-      <div>
-        {{ range .Site.Taxonomies.tags }}
-        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
-        {{ end }}
-      </div>
-    </small>
-    {{ end }}
 </content>
 {{ end }}
